@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   useEffect(() => {
+    console.log('Use Effect');
     fetch('/api/sample')
       .then((data) => data.json())
       .then((data) => {
