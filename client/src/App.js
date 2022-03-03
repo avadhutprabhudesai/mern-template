@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
 
@@ -9,7 +8,8 @@ function App() {
       .then((data) => data.json())
       .then((data) => {
         console.log(data);
-      });
+      })
+      .catch(console.error);
   }, []);
 
   return (

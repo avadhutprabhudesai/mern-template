@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "dev": "nodemon index.js",
+    "postdev": "cd client && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,11 @@
     "url": "https://github.com/avadhutprabhudesai/mern-heroku-netlify/issues"
   },
   "homepage": "https://github.com/avadhutprabhudesai/mern-heroku-netlify#readme",
+  "lint-staged": {
+    "/**/*.js": [
+      "eslint"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/eslint-parser": "^7.13.8",
@@ -31,9 +40,9 @@
     "commitizen": "^4.2.3",
     "css-loader": "^5.1.1",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.21.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-config-standard": "^16.0.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -58,12 +67,14 @@
     }
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/runtime": "^7.17.2",
     "@faker-js/faker": "^6.0.0-alpha.6",
     "express": "^4.17.3",
     "jest": "^27.5.1",
     "mongoose": "^6.2.1",
-    "ramda": "^0.27.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "ramda": "^0.27.1"
   },
   "engines": {
     "node": "16.x"
