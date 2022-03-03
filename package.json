@@ -64,5 +64,8 @@
     "mongoose": "^6.2.1",
     "ramda": "^0.27.1",
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
