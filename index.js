@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/api/sample', (req, res) => {
   // Return them as json
   res.json({
-    data: 'Hello World',
+    data: 'Hello World express',
   });
 });
 

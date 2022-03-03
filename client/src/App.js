@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is deployed on Netlify</h1>
+      <h1>This is deployed on Heroku</h1>
     </div>
   );
 }
