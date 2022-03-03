@@ -12,8 +12,6 @@ app.get('/api/sample', (req, res) => {
   res.json({
     data: 'Hello World',
   });
-
-  console.log(`Sent ${count} passwords`);
 });
 
 app.get('*', (req, res) => {
